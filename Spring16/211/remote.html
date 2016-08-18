@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hacks Inc.</title>
+        <style>
+            
+            * {
+	           margin: 0;
+               padding: 0;
+	           
+            }
+            
+            #header {
+                height: 75px;
+                background: black;
+            }
+           
+            #header h1 {
+                padding-top: 35px;
+                text-align: right;
+                font-size: 35px;
+                color: lawngreen;
+            }
+            
+            #header h1 a {
+                text-decoration: none;
+                color: #99ff99;
+                background: black;
+            }
+            
+            #main-nav {
+                background: lightblue;
+                height: 41px;
+                padding-bottom: 6px;
+            }
+            
+            #list {
+                padding-top: 18px;
+                //float: right;
+                
+            }
+            
+            #list li {
+                display: inline;
+            }
+            
+            #list li a {
+                background: orange;
+                border-radius: 9px 9px 0px 0px;
+                padding: 8px;
+                color: white;
+                text-decoration: none;
+                font-size: 18px; 
+            }
+            
+            #list li a:hover {
+                background: blue;
+            }
+            
+            #sidebar {
+                width: 175px;
+                height: 3270px;
+                float: left;
+                padding-top: 65px;
+                padding-left: 25px;
+                padding-right: 20px;
+                background: #e5f7ff;
+            }
+            
+            #sidebar h1 {
+                font-size: 25px;
+                text-decoration: underline;
+                line-height: 40px;
+            }
+            
+            #sidebar a {
+                line-height: 35px;
+                text-decoration: none;
+                font-size: 20px;
+                
+            }
+            
+            #content {
+                //height: 3310px;
+                width: 1090px;
+                margin: auto;
+                //background: green;
+                //clear: both;
+                padding-top: 25px;
+                text-align: left;
+            }
+            
+            #content pre {
+                font-size: 20px;
+                font-family: serif;
+            }
+            
+            #content h1 {
+                font-size: 30px;
+            }
+            
+            .class {
+                //text-indent: 50px;
+                font-size: 20px;
+            }
+            
+            #sub-content {
+                width: 1000px;
+                height: 400px;
+                margin: auto;
+            }
+            
+            #longer {
+                width: 1000px;
+                height: 710px;
+                margin: auto;
+            }
+            
+            .moreImages {
+                width: 1000px;
+                height: 300px;
+                margin: auto;
+            }
+            
+            #uniqueSub-Content {
+                width: 1000px;
+                height: 600px;
+                margin: auto;
+            }
+            
+            #sub-content a {
+                padding-left: 120px;
+                font-size: 20px;
+                
+            }
+            
+            #info {
+                padding-left: 520px;
+                font-size: 20px;
+            }
+            
+            #longerInfo {
+                padding-left: 507px;
+                font-size: 20px;  
+            }
+            
+            #moreInfo {
+                padding-left: 503px;
+                font-size: 20px;
+            }
+            
+            #longer a {
+                padding-right: 350px;
+                font-size: 20px;
+                float: right;
+            }
+            
+            #uniqueSub-Content a {
+                padding-right: 350px;
+                font-size: 20px;
+                float: right;
+            }
+            
+            #sub-content img {
+                float: left;
+                
+            }
+            
+            #longer img {
+                float: left;
+            }
+            
+            #moreImages img {
+                float: left;
+            }
+            
+            #uniqueSub-Content img {
+                float: left;
+            }
+           
+            
+            #footer {
+                height: 75px;
+                //background: purple;
+                border-top: 1px solid lightgrey;
+                text-align: center;
+                padding: 5px;
+                color: lightgrey;
+            }
+            
+            #footer a {
+                color: lightgrey;
+            }
+            
+            #footer a:hover {
+                color: orange;
+            }
+                
+        </style>
+    
+    </head>
+<body>
+
+    <div id="header">
+        <h1><a href="http://thetapc.github.io/">Hacks Incorporated</a></h1>
+    </div>
+    
+    <div id="main-nav">
+        <ul id="list">
+            <li><a href="http://thetapc.github.io/Spring2015/spring2015.html">Spring 2015</a></li>
+            <li><a href="http://thetapc.github.io/Summer2015/summer2015.html">Summer 2015</a></li>
+            <li><a href="http://thetapc.github.io/Fall2015/fall2015.html">Fall 2015</a></li>
+            <li><a href="http://thetapc.github.io/Spring2016/spring2016.html">Spring 2016</a></li>
+        
+        </ul>
+    </div>
+    
+    <div id="sidebar">
+        <h1>Fall 2015</h1>
+        <a href="http://thetapc.github.io/Spring2016/admin.html">Admin (?)</a> <br>
+        <a href="http://thetapc.github.io/Fall2015/C++.html">Final Project (?)</a> <br> 
+        <a href="http://thetapc.github.io/Fall2015/JavaScript.html">C++ (?)</a> <br>
+        <a href="http://thetapc.github.io/Fall2015/VisualBasic.html">D. Structures (?)</a>
+    </div>
+    
+    <div id="content">
+        <h1> Connecting to the Linode server remotely</h1> <br>
+         <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13936306/f99c2170-ef79-11e5-9183-0c4261efec16.jpg" alt="grub6" width="400" height="300">
+            <div id="info">
+                <p1>Configure the bios to be able to allow console redirection. Go to the advanced tab in the bios, change 
+                the console redirection to match the picture.
+                </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+        <img src="https://cloud.githubusercontent.com/assets/13530427/13935957/9c4853d8-ef77-11e5-8b10-d3fa45bf7491.jpg" alt="grub2" width="400" height="300">
+            <div id="info">
+                <p1>Create the: <br>
+                /etc/init/ttyS0.conf <br>
+                just like the picture shows onto the local computer.
+                </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <div id="info">
+                <p1>Connect the serial cable from the server to the local computer. The local computer should have the usb end. <br>
+                Install the following tools on the local computer: <br>
+                setserial <br>
+                screen <br>
+                By typing: <br>
+                sudo apt-get install setserial <br>
+                sudo apt-get install screen
+                </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <div id="info">
+                <p1>You can verify that the cable is being read with two options. <br>
+                1. Type: <br>
+                dmesg | grep 'ttyUSB' <br>
+                You should see it listed. <br>
+                2. Type <br>
+                ls -l /dev/ttyU* <br>
+                Again, it should pop up. <br>
+                Once you have verified that it's reading correctly, change the permission of it. <br>
+                Type: <br>
+                sudo chmod 777 /dev/ttyUSB0 <br>
+                In my case, mine is called USB0.
+                </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <div id="info">
+                <p1>Type: <br>
+                sudo start ttyS0 <br>
+                This won't work if you don't have the ttyS0.conf <br>
+                And you only have to start it once. <br>
+                Type: <br>
+                sudo screen /dev/ttyUSB0 115200 <br>
+                Important: If you don't type sudo before screen then the tool will be wonky with funky symbols.
+                </p1>
+            </div>
+        </div>
+       
+        <div id="sub-content">
+            <div id="info">
+                <p1>It takes a few minutes for the screen tool to work. Once it starts up, you will be able to see everything that 
+                the server is displaying. <br>
+                To see if there are other screens up, type: <br>
+                screen -r <br>
+                To exit screen, enter <br>
+                CTRL+A+: <br>
+                kill
+                </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13936430/ea57c790-ef7a-11e5-93fa-908192f77a0b.jpg" alt="grub7" width="400" height="300">
+            <div id="info">
+                <p1>Configure grub in: <br>
+                /etc/default/grub <br>
+                By adding the commands that the picture has displayed to the left.
+                </p1>
+            </div>
+        </div>
+
+    
+    <div id="footer">
+        <a href="http://thetapc.github.io/Footer/Services.html">Services</a> - 
+        <a href="http://thetapc.github.io/Footer/Resume.html">Resume</a> -
+        <a href="http://thetapc.github.io/Footer/Contact.html">Contact Me</a>
+    </div>
+    
+</body>
+</html>
