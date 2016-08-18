@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hacks Inc.</title>
+        <style>
+            
+            * {
+	           margin: 0;
+               padding: 0;
+	           
+            }
+            
+            #header {
+                height: 75px;
+                background: black;
+            }
+           
+            #header h1 {
+                padding-top: 35px;
+                text-align: right;
+                font-size: 35px;
+                color: lawngreen;
+            }
+            
+            #header h1 a {
+                text-decoration: none;
+                color: #99ff99;
+                background: black;
+            }
+            
+            #main-nav {
+                background: lightblue;
+                height: 41px;
+                padding-bottom: 6px;
+            }
+            
+            #list {
+                padding-top: 18px;
+                //float: right;
+                
+            }
+            
+            #list li {
+                display: inline;
+            }
+            
+            #list li a {
+                background: orange;
+                border-radius: 9px 9px 0px 0px;
+                padding: 8px;
+                color: white;
+                text-decoration: none;
+                font-size: 18px; 
+            }
+            
+            #list li a:hover {
+                background: blue;
+            }
+            
+            #sidebar {
+                width: 175px;
+                height: 3270px;
+                float: left;
+                padding-top: 65px;
+                padding-left: 25px;
+                padding-right: 20px;
+                background: #e5f7ff;
+            }
+            
+            #sidebar h1 {
+                font-size: 25px;
+                text-decoration: underline;
+                line-height: 40px;
+            }
+            
+            #sidebar a {
+                line-height: 35px;
+                text-decoration: none;
+                font-size: 20px;
+                
+            }
+            
+            #content {
+                height: 3310px;
+                width: 1090px;
+                margin: auto;
+                //background: green;
+                //clear: both;
+                padding-top: 25px;
+                text-align: left;
+            }
+            
+            #content pre {
+                font-size: 20px;
+                font-family: serif;
+            }
+            
+            #content h1 {
+                font-size: 30px;
+            }
+            
+            .class {
+                //text-indent: 50px;
+                font-size: 20px;
+            }
+            
+            #sub-content {
+                width: 1000px;
+                height: 400px;
+                margin: auto;
+            }
+            
+            #longer {
+                width: 1000px;
+                height: 710px;
+                margin: auto;
+            }
+            
+            .moreImages {
+                width: 1000px;
+                height: 300px;
+                margin: auto;
+            }
+            
+            #uniqueSub-Content {
+                width: 1000px;
+                height: 600px;
+                margin: auto;
+            }
+            
+            #sub-content a {
+                padding-left: 120px;
+                font-size: 20px;
+                
+            }
+            
+            #info {
+                padding-left: 520px;
+                font-size: 20px;
+            }
+            
+            #longerInfo {
+                padding-left: 507px;
+                font-size: 20px;  
+            }
+            
+            #moreInfo {
+                padding-left: 503px;
+                font-size: 20px;
+            }
+            
+            #longer a {
+                padding-right: 350px;
+                font-size: 20px;
+                float: right;
+            }
+            
+            #uniqueSub-Content a {
+                padding-right: 350px;
+                font-size: 20px;
+                float: right;
+            }
+            
+            #sub-content img {
+                float: left;
+                
+            }
+            
+            #longer img {
+                float: left;
+            }
+            
+            #moreImages img {
+                float: left;
+            }
+            
+            #uniqueSub-Content img {
+                float: left;
+            }
+           
+            
+            #footer {
+                height: 75px;
+                //background: purple;
+                border-top: 1px solid lightgrey;
+                text-align: center;
+                padding: 5px;
+                color: lightgrey;
+            }
+            
+            #footer a {
+                color: lightgrey;
+            }
+            
+            #footer a:hover {
+                color: orange;
+            }
+                
+        </style>
+    
+    </head>
+<body>
+
+    <div id="header">
+        <h1><a href="http://thetapc.github.io/">Hacks Incorporated</a></h1>
+    </div>
+    
+    <div id="main-nav">
+        <ul id="list">
+            <li><a href="http://thetapc.github.io/Spring2015/spring2015.html">Spring 2015</a></li>
+            <li><a href="http://thetapc.github.io/Summer2015/summer2015.html">Summer 2015</a></li>
+            <li><a href="http://thetapc.github.io/Fall2015/fall2015.html">Fall 2015</a></li>
+            <li><a href="http://thetapc.github.io/Spring2016/spring2016.html">Spring 2016</a></li>
+        
+        </ul>
+    </div>
+    
+    <div id="sidebar">
+        <h1>Fall 2015</h1>
+        <a href="http://thetapc.github.io/Spring2016/admin.html">Admin (?)</a> <br>
+        <a href="http://thetapc.github.io/Fall2015/C++.html">Final Project (?)</a> <br> 
+        <a href="http://thetapc.github.io/Fall2015/JavaScript.html">C++ (?)</a> <br>
+        <a href="http://thetapc.github.io/Fall2015/VisualBasic.html">D. Structures (?)</a>
+    </div>
+    
+    <div id="content">
+        <h1> Using sshfs</h1> <br>
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/12573124/e0d8b0d2-c3a9-11e5-95e9-db77a4ddcc07.JPG" alt="sshfs1" width="400" height="300">
+            <div id="info">
+                <p1><pre></pre>We will be using sshfs to mount a remote to a local. Install sshfs if you do not have it:
+                sudo apt-get install sshfs
+                Installing will prompt you for the root password. Notice
+                that my local will be maria1994 on my Ubuntu box. The remote for this example will be
+                mloza1@jmkll.org</pre></p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/12573127/e0d944fc-c3a9-11e5-9ead-304d2f0f091d.JPG" alt="sshfs2" width="400" height="300">
+            <div id="info">
+                <p1>Create a directory called mnt in the local and remote. Notice that there are no files in
+                the mnt directory in local.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/12573126/e0d93908-c3a9-11e5-861e-616e8b421caa.JPG" alt="sshfs3" width="400" height="300">
+            <div id="info">
+                <p1>Whereas, the remote has two files already created before this tutorial. </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/12573128/e0da414a-c3a9-11e5-9850-21f209f75814.JPG" alt="sshfs4" width="400" height="300">
+            <div id="info">
+                <p1><pre>In your local, type the following into your command line: 
+        sshfs userName@server:/pathToYourDesiredMntPoint ~/pathToYourLocalMntPoint
+       		userName@server is the information of your remote. Followed by the mountpoint 
+       		in your remote finishing off with the mountpoint in your local. You will be 
+       		prompted for the remote's password. To verify that you successfully mounted, typing: 
+       		df 
+       		into the command line should reveal that the remote is under the list.</pre></p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/12573129/e0dada74-c3a9-11e5-82f2-943d6dcbac89.JPG" alt="sshfs5" width="400" height="300">
+            <div id="info">
+                <p1>Local will now have files under the mnt directory. Keep in mind that these files are saved
+                in the remote and are NOT saved under local. They will disappear after unmounting.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/12573125/e0d8c2c0-c3a9-11e5-9e2c-eaaba7cbc544.JPG" alt="sshfs6" width="400" height="300">
+            <div id="info">
+                <p1>Creating a new file in the mounted local in the mnt directory, will indeed be saved in the 
+                remote. Once more, the new file will not be saved in local.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/12573131/e0ed6eb4-c3a9-11e5-8a62-e47fc4ce415b.JPG" alt="sshfs7" width="400" height="300">
+            <div id="info">
+                <p1>Luckily, we can copy files from remote to the local. After unmounting, the copied file will 
+                still appear in the location you wished to save it at in local.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/12573130/e0ead6c2-c3a9-11e5-87b8-8c67aa85938f.JPG" alt="sshfs8" width="400" height="300">
+            <div id="info">
+                <p1><pre></pre>Lastly, unmounting. Type: 
+                fusermount -u /home/localUser/mnt  
+                
+                Make sure you are no longer in the local mnt directory!!! And that is how you mount local to remote using sshfs. </pre></p1>
+            </div>
+        </div>
+            
+    </div>
+    
+    <div id="footer">
+        <a href="http://thetapc.github.io/Footer/Services.html">Services</a> - 
+        <a href="http://thetapc.github.io/Footer/Resume.html">Resume</a> -
+        <a href="http://thetapc.github.io/Footer/Contact.html">Contact Me</a>
+    </div>
+    
+</body>
+</html>
