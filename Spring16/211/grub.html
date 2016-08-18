@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hacks Inc.</title>
+        <style>
+            
+            * {
+	           margin: 0;
+               padding: 0;
+	           
+            }
+            
+            #header {
+                height: 75px;
+                background: black;
+            }
+           
+            #header h1 {
+                padding-top: 35px;
+                text-align: right;
+                font-size: 35px;
+                color: lawngreen;
+            }
+            
+            #header h1 a {
+                text-decoration: none;
+                color: #99ff99;
+                background: black;
+            }
+            
+            #main-nav {
+                background: lightblue;
+                height: 41px;
+                padding-bottom: 6px;
+            }
+            
+            #list {
+                padding-top: 18px;
+                //float: right;
+                
+            }
+            
+            #list li {
+                display: inline;
+            }
+            
+            #list li a {
+                background: orange;
+                border-radius: 9px 9px 0px 0px;
+                padding: 8px;
+                color: white;
+                text-decoration: none;
+                font-size: 18px; 
+            }
+            
+            #list li a:hover {
+                background: blue;
+            }
+            
+            #sidebar {
+                width: 175px;
+                height: 3270px;
+                float: left;
+                padding-top: 65px;
+                padding-left: 25px;
+                padding-right: 20px;
+                background: #e5f7ff;
+            }
+            
+            #sidebar h1 {
+                font-size: 25px;
+                text-decoration: underline;
+                line-height: 40px;
+            }
+            
+            #sidebar a {
+                line-height: 35px;
+                text-decoration: none;
+                font-size: 20px;
+                
+            }
+            
+            #content {
+                //height: 3310px;
+                width: 1090px;
+                margin: auto;
+                //background: green;
+                //clear: both;
+                padding-top: 25px;
+                text-align: left;
+            }
+            
+            #content pre {
+                font-size: 20px;
+                font-family: serif;
+            }
+            
+            #content h1 {
+                font-size: 30px;
+            }
+            
+            .class {
+                //text-indent: 50px;
+                font-size: 20px;
+            }
+            
+            #sub-content {
+                width: 1000px;
+                height: 400px;
+                margin: auto;
+            }
+            
+            #longer {
+                width: 1000px;
+                height: 710px;
+                margin: auto;
+            }
+            
+            .moreImages {
+                width: 1000px;
+                height: 300px;
+                margin: auto;
+            }
+            
+            #uniqueSub-Content {
+                width: 1000px;
+                height: 600px;
+                margin: auto;
+            }
+            
+            #sub-content a {
+                padding-left: 120px;
+                font-size: 20px;
+                
+            }
+            
+            #info {
+                padding-left: 520px;
+                font-size: 20px;
+            }
+            
+            #longerInfo {
+                padding-left: 507px;
+                font-size: 20px;  
+            }
+            
+            #moreInfo {
+                padding-left: 503px;
+                font-size: 20px;
+            }
+            
+            #longer a {
+                padding-right: 350px;
+                font-size: 20px;
+                float: right;
+            }
+            
+            #uniqueSub-Content a {
+                padding-right: 350px;
+                font-size: 20px;
+                float: right;
+            }
+            
+            #sub-content img {
+                float: left;
+                
+            }
+            
+            #longer img {
+                float: left;
+            }
+            
+            #moreImages img {
+                float: left;
+            }
+            
+            #uniqueSub-Content img {
+                float: left;
+            }
+           
+            
+            #footer {
+                height: 75px;
+                //background: purple;
+                border-top: 1px solid lightgrey;
+                text-align: center;
+                padding: 5px;
+                color: lightgrey;
+            }
+            
+            #footer a {
+                color: lightgrey;
+            }
+            
+            #footer a:hover {
+                color: orange;
+            }
+                
+        </style>
+    
+    </head>
+<body>
+
+    <div id="header">
+        <h1><a href="http://thetapc.github.io/">Hacks Incorporated</a></h1>
+    </div>
+    
+    <div id="main-nav">
+        <ul id="list">
+            <li><a href="http://thetapc.github.io/Spring2015/spring2015.html">Spring 2015</a></li>
+            <li><a href="http://thetapc.github.io/Summer2015/summer2015.html">Summer 2015</a></li>
+            <li><a href="http://thetapc.github.io/Fall2015/fall2015.html">Fall 2015</a></li>
+            <li><a href="http://thetapc.github.io/Spring2016/spring2016.html">Spring 2016</a></li>
+        
+        </ul>
+    </div>
+    
+    <div id="sidebar">
+        <h1>Fall 2015</h1>
+        <a href="http://thetapc.github.io/Spring2016/admin.html">Admin (?)</a> <br>
+        <a href="http://thetapc.github.io/Fall2015/C++.html">Final Project (?)</a> <br> 
+        <a href="http://thetapc.github.io/Fall2015/JavaScript.html">C++ (?)</a> <br>
+        <a href="http://thetapc.github.io/Fall2015/VisualBasic.html">D. Structures (?)</a>
+    </div>
+    
+    <div id="content">
+        <h1> Booting Different ISOs with Grub Boot Loader and a USB</h1> <br>
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13308368/92e08248-db27-11e5-87b0-80b7388c9b4b.png" alt="grub1" width="400" height="300">
+            <div id="info">
+                <p1>This document was modified from: http://www.pendrivelinux.com/boot-multiple-iso-from-usb-via-grub2-using-linux/ <br>
+                Plug in an empty flash drive since this process will delete anything on your drive onto your Linux system. <br> 
+                It is very important to be root user to continue. <br> 
+                Type: su - or sudo su or sudo su - <br>
+                Type: df <br>
+                This command will confirm that the flash drive is connected to your computer. My flash drive is
+                on the last line.
+                </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13308370/92e23020-db27-11e5-9a09-ad181e3df905.png" alt="grub2" width="400" height="300">
+            <div id="info">
+                <p1>Type: fdisk -l (<- Lowercase L) <br>
+                This will let you what your flash drive is called. It should be
+                sdx (x can be any letter) In my case, my drive is sdc. <br>
+                </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13308371/92f1a9ba-db27-11e5-8e0d-522a2028f81b.png" alt="grub3" width="400" height="300">
+            <div id="info">
+                <p1>Type: fdisk /dev/sdx <br> 
+                Don't forget to replace the x with your appropriate letter. <br>
+               	Type: d <br>
+               	This will delete any existing partitions. <br>
+                Type: n <br>
+                This will create a new partition. <br>
+                Type: p <br>
+                For a primary partition. <br>
+                Type: 1 <br>
+                Creates the primary partition. <br>
+                Press: Enter <br>
+                This will use the default sector. <br>
+                Press: Enter <br>
+                Again using the default. <br>
+                </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13308372/92f29712-db27-11e5-9fec-759a352673c2.png" alt="grub4" width="400" height="300">
+            <div id="info">
+                <p1>Type: a <br>
+                For active. <br> 
+                Type: 1 <br>
+                This will make the first partition bootable. <br>
+                Type: <br>
+                t For partition type. <br>
+                Type: c <br>
+                For the use of Fat32 partition. <br>
+                Type: w <br>
+                This will write the changes and close fdisk.
+                </p1>
+            </div>
+        </div>
+       
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13308365/92dc7ef0-db27-11e5-92ea-8a353b2a9d4a.png" alt="grub5" width="400" height="300">
+            <div id="info">
+                <p1>Type: umount /dev/sdx1 <br>
+                This will unmount the flash drive. <br>
+                Type: mkfs.vfat -F32 -n MULTIBOOT /dev/sdx <br>
+                This will format the partition as Fat32. <br>
+                </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13308366/92dcbb04-db27-11e5-80c4-ad38d97bea39.png" alt="grub6" width="400" height="300">
+            <div id="info">
+                <p1>Type: mkdir /mnt/USB <br>
+                A new directory called USB will be created under mnt. <br>
+                Type: mount /dev/sdx1 /mnt/USB <br>
+                The flash drive will connect again. <br>
+                Type: grub-install --force --no-floppy --boot-directory=/mnt/USB/boot /dev/sdx1 <br>
+                Grub will be installed on the drive. <br>
+                </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13308369/92e0b240-db27-11e5-9da0-596d01a6662d.png" alt="grub7" width="400" height="300">
+            <div id="info">
+                <p1>Type: cd /mnt/USB/boot/grub <br>
+                The directory will be changed. <br>
+                Type: wget pendrivelinux.com/downloads/multibootlinux/grub.cfg <br> 
+                The Grug configuration will be downloaded. This file can be modified to add newer/different ISO versions. 
+                This file must have the appropirate ISO or the usb won't boot the ISO correctly. <br>
+                The next step is very important! This could cause the whole process to be a waste of time since the usb won't boot properly. <br>
+                Type: sync</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13308367/92df6e6c-db27-11e5-9550-69e7a22038c3.png" alt="grub8" width="400" height="300">
+            <div id="info">
+                <p1>Type: cd /mnt/USB <br> 
+                The directory will be changed. <br>
+                I will be downloading Tiny Core for this example. But I will list the other available links for downloadable ISOs 
+                that are already listed in the Grub configuration file. <br>
+                Type: wget "http://releases.ubuntu.com/13.04/ubuntu-13.04-desktop-i386.iso" -O ubuntu.iso <br> 
+                Again, the next step is very important! This could cause the whole process to be a waste of time since the usb won't boot properly. <br>
+                Type: sync <br>
+                Type: reboot <br>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <div id="info">
+                <p1>When your system is booting up, make sure you select Boot Options and select USB option. This should lead you 
+                to the Grub Boot Loader with a few ISO system. Don't be alarmed when you see multiple OSs. This is because 
+                the Grub configuration file has the ISOs in a loop to be read. But without the appropriate download, the boot 
+                won't work. <br>
+                Linux Mint: wget "ftp://ftp.heanet.ie/pub/linuxmint.com/stable/15/linuxmint-15-cinnamon-dvd-32bit.iso" -O linuxmint.iso <br>
+                Ubuntu 13.04: wget "http://releases.ubuntu.com/13.04/ubuntu-13.04-desktop-i386.iso" -O ubuntu.iso <br>
+                These are the other two ISOs that I have successfully been able to boot.</p1>
+            </div>
+        </div>
+            
+    </div>
+    
+    <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13309639/83e44340-db33-11e5-9349-0b1286f3bc1b.JPG" alt="grub8" width="400" height="300">
+            <div id="info">
+                <p1>This is what your Grub configuration file should look like minus the highlighted text. But you can insert a 
+                newer/different ISO on your USB by adding it in the Grub config like I have. You just need to know the correct files. I will
+                explain this later.
+            </div>
+        </div>
+    
+    <div id="footer">
+        <a href="http://thetapc.github.io/Footer/Services.html">Services</a> - 
+        <a href="http://thetapc.github.io/Footer/Resume.html">Resume</a> -
+        <a href="http://thetapc.github.io/Footer/Contact.html">Contact Me</a>
+    </div>
+    
+</body>
+</html>
