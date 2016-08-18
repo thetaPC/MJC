@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hacks Inc.</title>
+        <style>
+            
+            * {
+	           margin: 0;
+               padding: 0;
+	           
+            }
+            
+            #header {
+                height: 75px;
+                background: black;
+            }
+           
+            #header h1 {
+                padding-top: 35px;
+                text-align: right;
+                font-size: 35px;
+                color: lawngreen;
+            }
+            
+            #header h1 a {
+                text-decoration: none;
+                color: #99ff99;
+                background: black;
+            }
+            
+            #main-nav {
+                background: lightblue;
+                height: 41px;
+                padding-bottom: 6px;
+            }
+            
+            #list {
+                padding-top: 18px;
+                //float: right;
+                
+            }
+            
+            #list li {
+                display: inline;
+            }
+            
+            #list li a {
+                background: orange;
+                border-radius: 9px 9px 0px 0px;
+                padding: 8px;
+                color: white;
+                text-decoration: none;
+                font-size: 18px; 
+            }
+            
+            #list li a:hover {
+                background: blue;
+            }
+            
+            #sidebar {
+                width: 175px;
+                height: 16850px;
+                float: left;
+                padding-top: 65px;
+                padding-left: 25px;
+                padding-right: 20px;
+                background: #e5f7ff;
+            }
+            
+            #sidebar h1 {
+                font-size: 25px;
+                text-decoration: underline;
+                line-height: 40px;
+            }
+            
+            #sidebar a {
+                line-height: 35px;
+                text-decoration: none;
+                font-size: 20px;
+                
+            }
+            
+            #content {
+                //height: 3310px;
+                width: 1090px;
+                margin: auto;
+                //background: green;
+                //clear: both;
+                padding-top: 25px;
+                text-align: left;
+            }
+            
+            #content pre {
+                font-size: 20px;
+                font-family: serif;
+            }
+            
+            #content h1 {
+                font-size: 30px;
+            }
+            
+            .class {
+                //text-indent: 50px;
+                font-size: 20px;
+            }
+            
+            #sub-content {
+                width: 1000px;
+                height: 400px;
+                margin: auto;
+            }
+            
+            #longer {
+                width: 1000px;
+                height: 710px;
+                margin: auto;
+            }
+            
+            .moreImages {
+                width: 1000px;
+                height: 300px;
+                margin: auto;
+            }
+            
+            #uniqueSub-Content {
+                width: 1000px;
+                height: 600px;
+                margin: auto;
+            }
+            
+            #sub-content a {
+                padding-left: 120px;
+                font-size: 20px;
+                
+            }
+            
+            #info {
+                padding-left: 520px;
+                font-size: 20px;
+            }
+            
+            #longerInfo {
+                padding-left: 507px;
+                font-size: 20px;  
+            }
+            
+            #moreInfo {
+                padding-left: 503px;
+                font-size: 20px;
+            }
+            
+            #longer a {
+                padding-right: 350px;
+                font-size: 20px;
+                float: right;
+            }
+            
+            #uniqueSub-Content a {
+                padding-right: 350px;
+                font-size: 20px;
+                float: right;
+            }
+            
+            #sub-content img {
+                float: left;
+                
+            }
+            
+            #longer img {
+                float: left;
+            }
+            
+            #moreImages img {
+                float: left;
+            }
+            
+            #uniqueSub-Content img {
+                float: left;
+            }
+           
+            
+            #footer {
+                height: 75px;
+                //background: purple;
+                border-top: 1px solid lightgrey;
+                text-align: center;
+                padding: 5px;
+                color: lightgrey;
+            }
+            
+            #footer a {
+                color: lightgrey;
+            }
+            
+            #footer a:hover {
+                color: orange;
+            }
+                
+        </style>
+    
+    </head>
+<body>
+
+    <div id="header">
+        <h1><a href="http://thetapc.github.io/">Hacks Incorporated</a></h1>
+    </div>
+    
+    <div id="main-nav">
+        <ul id="list">
+            <li><a href="http://thetapc.github.io/Spring2015/spring2015.html">Spring 2015</a></li>
+            <li><a href="http://thetapc.github.io/Summer2015/summer2015.html">Summer 2015</a></li>
+            <li><a href="http://thetapc.github.io/Fall2015/fall2015.html">Fall 2015</a></li>
+            <li><a href="http://thetapc.github.io/Spring2016/spring2016.html">Spring 2016</a></li>
+        
+        </ul>
+    </div>
+    
+    <div id="sidebar">
+        <h1>Fall 2015</h1>
+        <a href="http://thetapc.github.io/Spring2016/admin.html">Admin (?)</a> <br>
+        <a href="http://thetapc.github.io/Fall2015/C++.html">Final Project (?)</a> <br> 
+        <a href="http://thetapc.github.io/Fall2015/JavaScript.html">C++ (?)</a> <br>
+        <a href="http://thetapc.github.io/Fall2015/VisualBasic.html">D. Structures (?)</a>
+    </div>
+    
+    <div id="content">
+        <h1> Grub boot Tiny Core on Virtual Workstation</h1> <br>
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273495/b2c2c8b6-da58-11e5-8d05-7c62db26e3ba.png" alt="tc1" width="400" height="300">
+            <div id="info">
+                <p1>Yes, I am aware that I am running this in an older version of Virtual Workstation. But trust me 
+                when I say it's the same instructions. But I will try to update this as soon as possible. <br><br>
+                <strong>If there are no instructions/image for a specific step, then take the default.</strong> <br><br>
+                First, we'll create a new virtual machine.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273496/b2c5bb98-da58-11e5-9a64-cd02d78becef.png" alt="tc2" width="400" height="300">
+            <div id="info">
+                <p1>Make sure to go with Custom.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273497/b2d24804-da58-11e5-89f7-4bcae372a185.png" alt="tc3" width="400" height="300">
+            <div id="info">
+                <p1>Pick the disk image file. I have already downloaded Tiny Core Plus onto my Downloads folder. </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273498/b2d3e916-da58-11e5-924e-076f3878e816.png" alt="tc4" width="400" height="300">
+            <div id="info">
+                <p1>You can change the name of your Virtual Machine. </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273499/b2d4e38e-da58-11e5-8cdf-babd6b075fca.png" alt="tc5" width="400" height="300">
+            <div id="info">
+                <p1>I picked 1 GB since my professor recommended it. Yoy may pick your preferred amount of memory. </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273500/b2d5e324-da58-11e5-92dd-2ec42870edd6.png" alt="tc6" width="400" height="300">
+            <div id="info">
+                <p1>Select IDE.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273501/b2d97c6e-da58-11e5-9f1a-19f62281bd9a.png" alt="tc7" width="400" height="300">
+            <div id="info">
+                <p1>The next screen will prompt you to select your disk. Click on: Create a new virtual disk. </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273502/b2dc71f8-da58-11e5-987c-6d63b199b90f.png" alt="tc8" width="400" height="300">
+            <div id="info">
+                <p1>This is what the last step should look like.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273503/b2eb0ccc-da58-11e5-966d-6fcfc309b7a3.png" alt="tc9" width="400" height="300">
+            <div id="info">
+                <p1>Right click on the Tiny Core tab. The newer version of VM has the selection of: Power On to Firmware. 
+                Click on that. This will boot up Tiny Core.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273504/b2ee80b4-da58-11e5-8edc-95601509ab0d.png" alt="tc10" width="400" height="300">
+            <div id="info">
+                <p1>This is what the bootup should look like. Press F10 to save and continue. This won't exit/shutdown the 
+                process.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273473/b27d464c-da58-11e5-91c4-2dce3b758816.png" alt="tc11" width="400" height="300">
+            <div id="info">
+                <p1>This is what the next step should look like. Press enter to select the very first option.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273474/b27fad92-da58-11e5-8520-f95b8ba8d841.png" alt="tc12" width="400" height="300">
+            <div id="info">
+                <p1>Yay! We're almost done!</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273474/b27fad92-da58-11e5-8520-f95b8ba8d841.png" alt="tc13" width="400" height="300">
+            <div id="info">
+                <p1>Click on: Apps. It's at the bottom of the screen.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273475/b27ffde2-da58-11e5-9def-031d0144295d.png" alt="tc14" width="400" height="300">
+            <div id="info">
+                <p1>Click the following from the Apps program on the top left side: Apps -> Cloud (Remote) -> Browse</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273502/b2dc71f8-da58-11e5-987c-6d63b199b90f.png" alt="tc15" width="400" height="300">
+            <div id="info">
+                <p1>Type: cfdisk <br>
+                into the textbox and press Enter. <br>
+                Click on: cfdisk.tcz <br>
+                on the left side of the program. On the bottom, change OnBoot to Download + Load <br>
+                Press on the button: Go </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273476/b2835014-da58-11e5-8b92-251d72ebe359.png" alt="tc16" width="400" height="300">
+            <div id="info">
+                <p1>Click on the Terminal at the bottom of the screen now.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273478/b28796f6-da58-11e5-827a-7c13035b1ee2.png" alt="tc17" width="400" height="300">
+            <div id="info">
+                <p1>Become root by typing: sudo su <br>
+                You will not be prompted for a password. Type: cfdisk </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273479/b2916258-da58-11e5-8944-28e27a30faa2.png" alt="tc18" width="400" height="300">
+            <div id="info">
+                <p1>This is what the next step should look like. Select: New <br>
+                with the Tab and Enter buttons.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273480/b294cf88-da58-11e5-8e75-e2a148070549.png" alt="tc19" width="400" height="300">
+            <div id="info">
+                <p1>Select: Primary</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273481/b2956038-da58-11e5-91b0-0ce12b504559.png" alt="tc20" width="400" height="300">
+            <div id="info">
+                <p1>Select: Bootable</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273482/b2985446-da58-11e5-9ed0-ae82c97daf35.png" alt="tc21" width="400" height="300">
+            <div id="info">
+                <p1>Select: Write</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273483/b298da42-da58-11e5-9b1b-aa6494fb8cf6.png" alt="tc22" width="400" height="300">
+            <div id="info">
+                <p1>Type: yes</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273484/b29cfffa-da58-11e5-812d-3c3f07ebdc27.png" alt="tc23" width="400" height="300">
+            <div id="info">
+                <p1>Select: Quit</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273485/b2a5270c-da58-11e5-966e-e4ba51f81604.png" alt="tc24" width="400" height="300">
+            <div id="info">
+                <p1>Type: fdisk -l (<- Lowercase L) <br>
+                You should have something similar.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273486/b2aa1c9e-da58-11e5-9c09-ae867ba4ea56.png" alt="tc25" width="400" height="300">
+            <div id="info">
+                <p1>You can exit out of the programs now. Click on: TC_Install <br>
+                at the bottom of the screen.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273487/b2aab960-da58-11e5-9af7-775650b6a8e5.png" alt="tc26" width="400" height="300">
+            <div id="info">
+                <p1>Make sure: Frugal and Whole Disk and sda <br>
+                are selected. Select on the next arrow key.</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273488/b2aceee2-da58-11e5-8408-f62d41905ef8.png" alt="tc27" width="400" height="300">
+            <div id="info">
+                <p1>Select: Proceed</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273489/b2aeca14-da58-11e5-8bfb-2f05f490d443.png" alt="tc28" width="400" height="300">
+            <div id="info">
+                <p1>Once the installation is completed, you may exit out of TC_Install. </p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273490/b2b0b41e-da58-11e5-8476-e30b2c0aa169.png" alt="tc29" width="400" height="300">
+            <div id="info">
+                <p1>Press: Ctrl + Alt <br>
+                to use your default OS's mouse. You won't be able to do anything in TC OS until you select on its screen. 
+                Right click on Tiny Core's tab and select: Settings...</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273491/b2bd0ac0-da58-11e5-8592-caaa429f6d35.png" alt="tc30" width="400" height="300">
+            <div id="info">
+                <p1>Select: CD/DVD (IDE)</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273492/b2bf60cc-da58-11e5-90dc-82f26f914b7e.png" alt="tc31" width="400" height="300">
+            <div id="info">
+                <p1>Uncheck: Connect at power on <br>
+                Select: Use physical drive
+                Click: OK</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273493/b2bfca94-da58-11e5-86d2-580a8faca72b.png" alt="tc32" width="400" height="300">
+            <div id="info">
+                <p1>Select: No</p1>
+            </div>
+        </div>
+        
+        <div id="sub-content">
+            <img src="https://cloud.githubusercontent.com/assets/13530427/13273494/b2c136ea-da58-11e5-91af-e518ce0ea50d.png" alt="tc33" width="400" height="300">
+            <div id="info">
+                <p1>Finally, reboot Tiny Core. This can be done by selecting: Exit <br>
+                at the bottom of the screen. You can also right click on TC's tab and select: Power -> Shutdown <br>
+                Once TC boots up, it will now run on the Virtual Machine.</p1>
+            </div>
+        </div>
+            
+    </div>
+    
+    <div id="footer">
+        <a href="http://thetapc.github.io/Footer/Services.html">Services</a> - 
+        <a href="http://thetapc.github.io/Footer/Resume.html">Resume</a> -
+        <a href="http://thetapc.github.io/Footer/Contact.html">Contact Me</a>
+    </div>
+    
+</body>
+</html>
