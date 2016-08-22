@@ -1,0 +1,89 @@
+/*
+Maria Loza
+CSCI 271 Section 5865
+Assignment #3 - Problem 7, page 170
+Due Date: 16 October 2015
+Created: 8 October 2015
+*/
+
+
+/*
+Problem:
+The quadratic formula is given. It wants a program
+that evaluates the x, by showing its possible 
+roots. However, b^2-4ac cannot be < 0. If there are
+no real roots then it has to let the user know.
+
+Solution:
+Variable declarations will be used for a, b, c, x, and
+possRoots (possible roots). possRoots will equal
+b^2-4ac in order to find how many roots are available.
+Then I'll split up the quadratic formula for the +-.
+To make the code a bit cleaner, I will also declare
+sqRoot for the answer that calculate: 
+square root of b^2-4ac.
+There must be two x's declared if there are two roots.
+*/
+
+#include "..\..\std_lib_facilities.h"
+
+int main()
+{
+
+	//variable declarations
+	double a;
+	double b;
+	double c;
+	double x1;
+	double x2;
+	double possRoots;
+	double sqRoot;
+
+	//user input
+	cout << "Solving for x with the quadratic formula. \n";
+	cout << "Enter a number for a: ";
+	cin >> a;
+	cout << "Enter a number for b: ";
+	cin >> b;
+	cout << "Enter a number for c: ";
+	cin >> c;
+
+				//test 1
+				//cout << (a + b + c) << "\n"; succeeded
+
+	//determing & calculating roots
+	possRoots = (pow(b,2) - (4 * a * c));
+				//cout << possRoots << "\n";
+	if (possRoots < 0)
+	{
+		cout << "There are no real roots. \n";
+	}
+	if (possRoots == 0)
+	{
+		x1 = (-((b) / (2 * a)));
+		cout << x1 << "\n";
+	}
+	if (possRoots > 0)
+	{
+		sqRoot = sqrt(possRoots);
+		x1 = ((-(b) + sqRoot) / (2 * a));
+		cout << x1 << "\n";
+		x2 = ((-(b) - sqRoot) / (2 * a));
+		cout << x2 << "\n";
+	}
+
+	
+
+	return 0;
+}
+
+/*
+Final thoughts:
+I have completed the assignment. I managed to do so by
+reviewing the quadratic formula online. However, I will let it
+sit for a few days. I will come back to review and make
+any necessary changes.
+
+The program seems to run fine after the review.
+
+*/

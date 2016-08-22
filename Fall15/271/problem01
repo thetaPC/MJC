@@ -1,0 +1,118 @@
+/*
+Maria Loza
+CSCI 271 Section 5865
+Assignment #5 - Problem 1, Page 377
+Due Date: 11/13/15
+Created: 11/5/15
+Modified: 11/10/15
+		  11/11/15
+		  11/12/15
+*/
+
+/*
+Problem:
+The program must grab information from a file that contains numbers.
+It will then add up all the numbers.
+The numbers must be separated by spaces in order to be added together.
+
+Solution:
+I'll have to create a text file using Notepad with about 10 - 15 numbers.
+If I understand the input and output stream. Then I would use a ifstream,
+and it'll have to be open in order to receive the data, a While loop will
+also be need.
+We are instructed to not create our own file. The user must input the file
+name, therefore, strings will have to be used. The instructions did not 
+mention that the user could input the numbers. Therefore, I will play
+with random numbers to get better understanding of it. 
+The files already exist therefore I will depend on the fact that they 
+have filled the files with necessary data.
+*/
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cstdlib> //rand() and srand()
+#include <ctime> //time()
+
+using namespace std;
+
+
+int main()
+{
+	//variable declarations
+	double random = 0;
+	double add = 0;
+	string inFile; //the user will save the file name to this variable for input
+	string outFile; //the user will save the new file name for output
+	ofstream outputNumbers; //if the file doesn't exist then the program will create it.
+	ifstream inputNumbers; //ifstream should indeed input outside info into the code, however file must exist!!!
+
+	//user input for the name of the file that will store the numbers
+	cout << "Type the input file (no spaces): ";
+	cin >> inFile;
+
+	//opening input stream
+	inputNumbers.open(inFile);
+
+	//testing the input stream
+	if (!inputNumbers)
+	{
+		cerr << "The input file could not open: " << inFile << "\n"; 
+	}
+	
+	//adding all the numbers together
+	while (!inputNumbers.eof()) //testing this way is pretty cool
+	{
+		inputNumbers >> random;
+		add = (random + add);
+					//cout << random << "\n";
+	} //end while
+
+	cout << "Type an ouput file to save the addition answer (no spaces): ";
+	cin >> outFile;
+
+	//opening the output stream
+	outputNumbers.open(outFile); //remember, if this txt file hadn't exist, the code would create it. yes, i've mentioned it twice. b/c very important.
+	//does the input txt file have to be under the project folder w/ the cpp? 
+
+	//testing the output stream
+	if (!outputNumbers)
+	{
+		cerr << "The output file could not open: " << outFile << "\n"; //I should look up more info on differences on cerr and error()
+	} //end if
+
+	//inputting the addition answer into the output file
+	outputNumbers << add << "\n";
+
+
+	//closing the streams
+	inputNumbers.close();
+	outputNumbers.close();
+	//it seems that the input stream cannot function properly when the output stream is still creating (open) the new file.
+	//if the file was already created, the output stream could be closed at the end along with the input stream for this project.
+
+	//displaying the total amount from the new file
+	cout << "The addition to all the numbers in " << outFile << " is " << add << "\n";
+	
+
+	return 0;
+} //end main
+
+/*
+My Notes:
+I didn't feel like this was too hard. It was helpful to clear up the mix up between
+input and output stream. It's literally what their names are. Therefore, I must
+remember that input is importing into the code or importing info into a new/created file.
+Output would, from understanding, export info into a new file. I'll have to review
+chapter 10 more carefully.
+I'll have to come back to test this since an easy assignment doesn't really exist.
+
+It wasn't that easy!!! I knew it! We were instructed to ask for the input file. I learned
+the hard way that the input file has to exist. I should have known! It's in my notes. But
+I thought I wrote it wrong. I really should have realized it when I looked at the code 
+from class. Either way, I finally understood how to set it up. I'm actually happy to be
+given the new information since I was able to learn more about the streams.
+I will have to ask to make sure that I understood the instructions before turning it in.
+Finally! It works!!!! The user is supposed to enter an existing file with their own numbers
+ already saved into this file.
+*/

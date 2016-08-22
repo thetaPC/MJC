@@ -1,0 +1,169 @@
+/*
+Maria Loza
+CSCI 271 - Section 5865
+Assignment #4 - Problem 5, Page 300
+Due Date: 10/30/15
+Created: 10/26/15
+Modified: 28 October 2015
+		  29 October 2015
+		  30 October 2015
+Swapped Vector
+*/
+
+/*
+Problem:
+There needs to be two functions. Each function will reverse
+the order of the vector.
+ex: 1,3,5,7,9 -> 9,7,5,3,1
+Each function will reverse the order in two specific ways.
+The first function will produced a new vector with the reversed
+order w/o touching the original vector.
+The second function will reverse the order and place it into
+the original vector. Replacing the original order. This will
+be done without another vector. The book hints swap. I am
+not sure if the swap hint is for the second or the first.
+I feel like the swap hint is for the first function. After reading the
+problem again, the swap is for the second function since the first function
+must leave the original vector unchanged.
+
+Solution:
+My functions will be located at the top. My next project I will attempt
+to put them in the bottom and figure out what layout I prefer better.
+For the first function, I'll create a new function to be the original.
+The user will be prompt to enter numbers to be placed into the original
+vector. I'm thinking of using size to reverse the order by subtracting one
+to assign it to the new reversed vector.
+I'm going to see if I can equate the original vector to the modified as if
+they are variables. Then I'll reverse the order with a for loop and push_back.
+I am still unsure how to approach the second function. I will think more
+on it but I will first try to attempt the first function.
+The second function, since it was hinted about swapm then I am thinking of
+swapping the original with a slighly modified version of itself (still same vector).
+The modified original will used this format original[i] with a for loop and i--.
+I have added a last function, print(). I noticed that I used this block of code
+too much so I created a function for it. It's conveniant and it's more experience
+with functions and references. 
+*/
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std; //first time not using the header given by the author
+
+void print(string label, vector<int>& revealed)
+{
+	for (int i = 0; i < revealed.size(); i++) //simply shows what vector looks & confirms the user input & reversal
+	{
+		cout << label << revealed[i] << "\n";
+
+	} //end 1st function
+
+	cout << "\n";
+}
+
+void firstReversal(vector<int>& previous) // -> by reference
+{
+	//vector declaration
+	vector<int>reverse;
+
+			//ignore this note: swap(test, reverse); //original no longer has any input b/c reversed vector was empty
+			// reverse = test; //yay!!!
+
+	for (int i = previous.size(); i--;) //reverses the original order in the reversed vector
+	{
+		reverse.push_back(previous[i]);
+				//cout << "reverse " << reverse[index] << "\n";
+	} //end loop
+
+			/*
+			for (int i = 0; i < reverse.size(); i++) //indeed confirms that equating two vectors is possible. 2nd vector now has the same data as the 1st vector
+			{
+				cout << "First reversal: " << reverse[i] << "\n";
+
+			} //end 2nd for loop
+			*/
+
+	print("First reversal: ", reverse);
+
+} //end 2nd function
+
+void secondReversal(vector<int>& old)
+{
+	//I am very proud of understanding of why the vector must be halved. I did need help though.
+	for (int i = 0; i < old.size()/2; i++) //reverses the original order in the reversed vector
+	{
+
+		swap(old[i], old[old.size() - 1 - i]);
+				//testing.push_back(index);
+				//cout << "reverse02 " << i << " < " << testing.size() << "\n";
+	} //end loop
+
+} //end 3rd function
+
+
+int main()
+{
+	try
+	{
+		//vector declarations
+		vector<int>original; //the original vector
+				//vector<int>modified; //the reversed 2nd vector
+				//vector<int>ori;
+
+		//variable declarations
+		int numbers;
+				//int num;
+				//string end = "exits";
+
+		//user input
+		//prompt will ask for random numbers to be inserted into the vector
+		cout << "Enter random numbers: \n";
+
+		while (cin >> numbers) //numbers are inserted into test until a non-number is entered
+		{
+					//cin >> numbers;
+			original.push_back(numbers);
+					//cin >> numbers;
+		} //end while loop
+
+
+		//info sent over to the functions
+		//printing and computing the reversals
+		print("First original: ", original);
+		firstReversal(original);
+				//print("First reversal: ", reverse);
+		print("Second original: ", original);
+		secondReversal(original);
+		print("Second reversal: ", original);
+	}
+
+	catch (exception& e)
+	{
+		cerr << "Error: " << e.what() << "\n";
+		return 1;
+	}
+
+	catch (...)
+	{
+		cerr << "Unknown error. \n";
+		return 2;
+	}
+
+	return 0;
+}
+
+
+/*
+My Notes:
+I added try b/c I did not use it in the last project and I wanted to work with 
+them to get more understanding. 
+This project went very well. It had elements that I was not comfortable with since
+I didn't understand them completely. Like:
+vectors
+try
+functions
+#include (that wasn't the header from the book)
+And I also learned a lot more about codes that I have worked with for a while.
+Overall, this project was the best.
+*/

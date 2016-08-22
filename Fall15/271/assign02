@@ -1,0 +1,133 @@
+/*
+Maria Loza
+CSCI 271 Section 5865
+Ch. 4 pg. 129 #8
+Due Date: 9 October 2015
+Created: 30 September 2015
+Modified: 7 October 2015
+          8 October 2015
+*/
+
+/*
+Problem:
+The first square equates to one grain of rice. The
+second square equals to 2 grains. The third is equal
+to 4 grain. And so on until reaching 64. Calculate
+how many squares it would take to reach 1,000 and
+1,000,000 and 1,000,000,000 grains. Loop will be
+needed. Variables to keep track of the current square,
+the number of grain for the current square, and
+to keep track of the grains on all previous square.
+This will be done with int. The amount of grains will
+be added with each passing square.
+
+Solution:
+I'm actually not sure where to start with this. I've
+thought about it for two days and still don't know.
+But I think I'll try a vector. I can keep track of all
+of them by storing them in a vector. No. Vector would
+not work. But I do believe a For loop is needed. I
+can store the current grain into one variable and the
+grain amount into another. The last variable will be
+a combination of both. I have yet figured out how to
+display the specific square for the previous grain amount.
+It might be an If statement. I have finally figured out
+how to approach this with the professor's help.
+ex: s0=1, s1=2, ...
+2^0=0, 2^1=2, ...
+
+*/
+
+#include "..\..\std_lib_facilities.h"
+
+int main()
+{
+
+	//variable declarations
+	double square = 0;
+	double currGrain = 0;
+	double total = 0;
+
+	for (square; square < 64; square++)
+	{
+		currGrain = pow(2, square);
+		//total = total + currGrain;
+		cout << currGrain << "\n";
+		if ((total >= 1000) & (total <= 2000))
+		{
+			cout << "Square " << square << " gives the minimum of 1,000 grains of rice at the total of " << total << "\n";
+		}
+
+		if ((total >= 1000000) & (total <= 2000000))
+		{
+			cout << "Square " << square << " gives the minimum of 1,000,000 grains of rice at the total of " << total << "\n";
+		}
+
+		if ((total >= 1000000000) & (total <= 2000000000))
+		{
+			cout << "Square " << square << " gives the minimum of 1,000,000,000 grains of rice at the total of " << total << "\n";
+		}
+
+		/*
+		if (total >= 1000000)
+		{
+		cout << square << "\n";
+		}
+
+		if (total >= 1000000000)
+		{
+		cout << square << "\n";
+		}*/
+
+	}
+
+
+
+
+	/* Discard.
+	//variable declarations
+	int square = 1;
+	int grain = 1;
+	//int both = ; //still not sure
+
+
+	//cout << square << "\t" << grain << "\n";
+
+	//computations
+	for (int i = 0; i < 999999999; i++)
+	{
+	grain = (square * 2);
+	square += 1;
+	//cout << square << "\t" << grain << "\n";
+
+
+	if (grain == 1000)
+	{
+	int first = grain;
+	cout << "The square " << square << " will produce "
+	<< grain << " grains of rice. \n";
+	}
+
+	if (grain == 100000)
+	{
+	int first = grain;
+	cout << "The square " << square << " will produce "
+	<< grain << " grains." << "\n";
+	}
+
+	if (grain == 1000000000)
+	{
+	int first = grain;
+	cout << "The square " << square << " will produce "
+	<< grain << " grains." << "\n";
+	}
+
+	}
+
+	//I still don't know how to do the last variable.
+	*/
+
+
+	return 0;
+
+}
