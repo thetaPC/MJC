@@ -1,0 +1,48 @@
+'Maria Loza
+'Lab 6 - Name Banner
+'March 25, 2015
+'CSCI 270 - 4769
+
+Module Module1
+
+    Sub Main()
+        printM()
+        printA()
+        printR()
+        printI()
+        printA()
+    End Sub
+    Sub printM()
+        Console.WriteLine("*   *")
+        Console.WriteLine("** **")
+        Console.WriteLine("* * *")
+        Console.WriteLine("*   *")
+        Console.WriteLine("*   *")
+        Console.WriteLine("")
+    End Sub
+    Sub printA()
+        Console.WriteLine(" *** ")
+        Console.WriteLine("*   *")
+Console.WriteLine("*****")
+        Console.WriteLine("*   *")
+        Console.WriteLine("*   *")
+        Console.WriteLine("")
+    End Sub
+    Sub printR()
+        Console.WriteLine("**** ")
+        Console.WriteLine("*   *")
+        Console.WriteLine("**** ")
+        Console.WriteLine("*  * ")
+        Console.WriteLine("*   *")
+        Console.WriteLine("")
+    End Sub
+    Sub printI()
+        Console.WriteLine("*****")
+        Console.WriteLine("  *  ")
+        Console.WriteLine("  *  ")
+        Console.WriteLine("  *  ")
+        Console.WriteLine("*****")
+        Console.WriteLine("")
+    End Sub
+
+End Module

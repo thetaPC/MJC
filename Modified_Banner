@@ -1,0 +1,82 @@
+'Maria Loza
+'Lab 7: Modified Banner
+'April 1, 2015
+'CSCI 270 - 4769
+
+Module Module1
+
+    Sub Main()
+        Dim i As Integer
+        For i = 1 To 5
+            printM(i)
+            Console.Write("  ")
+            printA(i)
+            Console.Write("  ")
+            printR(i)
+            Console.Write("  ")
+            printI(i)
+            Console.Write("  ")
+            printA(i)
+            Console.Write("  ")
+            Console.WriteLine("")
+        Next
+    End Sub
+
+    Sub printM(row As Integer)
+	Select Case (row)
+            Case 1
+                Console.Write("*   *")
+            Case 2
+                Console.Write("** **")
+            Case 3
+                Console.Write("* * *")
+            Case 4
+                Console.Write("*   *")
+            Case 5
+                Console.Write("*   *")
+        End Select
+    End Sub
+    Sub printA(row As Integer)
+        Select Case (row)
+            Case 1
+                Console.Write(" *** ")
+            Case 2
+                Console.Write("*   *")
+            Case 3
+                Console.Write("*****")
+            Case 4
+                Console.Write("*   *")
+            Case 5
+                Console.Write("*   *")
+        End Select
+    End Sub
+    Sub printR(row As Integer)
+        Select Case (row)
+            Case 1
+                Console.Write("**** ")
+            Case 2
+                Console.Write("*   *")
+            Case 3
+                Console.Write("**** ")
+            Case 4
+                Console.Write("*  * ")
+            Case 5
+                Console.Write("*   *")
+        End Select
+    End Sub
+    Sub printI(row As Integer)
+        Select Case (row)
+            Case 1
+                Console.Write("*****")
+            Case 2
+                Console.Write("  *  ")
+            Case 3
+                Console.Write("  *  ")
+            Case 4
+                Console.Write("  *  ")
+            Case 5
+                Console.Write("*****")
+        End Select
+    End Sub
+
+End Module
