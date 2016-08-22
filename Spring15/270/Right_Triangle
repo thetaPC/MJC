@@ -1,0 +1,24 @@
+'Maria Loza
+'Lab 2- Basic Shapes: Right Triangle
+'February 1, 2015
+'Modified February 2, 2015
+'CSCI 270 - 4769
+
+Turtle.Speed = 9
+Turtle.PenUp()
+Turtle.TurnLeft()
+Turtle.Move(50)
+Turtle.TurnLeft()
+Turtle.Move(50)
+Turtle.Turn(180)
+'Turtle.Move(50)
+Turtle.PenDown()
+Turtle.Turn(45)
+Turtle.Move(320)
+Turtle.Turn(135)
+Turtle.Move(320)
+Turtle.Turn(90)
+Turtle.Move(320)
+Turtle.Turn(135)
+Turtle.Move(133)
+Turtle.Hide()

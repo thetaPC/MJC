@@ -1,0 +1,71 @@
+'ma'Maria Loza
+'Lab 5 - Repetition: Shapes
+'March 13, 2015
+'CSCI 270 - 4769
+
+
+'name off the number of sides and lengths available
+
+TextWindow.WriteLine("There are four options that you may pick from: [3] with 100, [4] with 175x100, [5] with 65, [0] will end the program:")
+
+'get the user's input
+
+userNumber = TextWindow.Read()
+
+'sketch the shape based off the input
+
+While (userNumber <> 0)
+  If (userNumber < 4) Then
+    Turtle.Speed = 9
+    Turtle.PenUp()
+    Turtle.Move(100)
+    Turtle.PenDown()
+    Turtle.Turn(150)
+    Turtle.Move(100)
+    Turtle.Turn(120)
+    Turtle.Move(100)
+    Turtle.Turn(120)
+    Turtle.Move(100)
+    Turtle.Hide()
+  Else
+    If (userNumber > 4) Then
+      Turtle.Speed = 9
+      Turtle.PenUp()
+      Turtle.Move(100)
+      Turtle.PenDown()
+      Turtle.Turn(126)
+      Turtle.Move(65)
+      Turtle.Turn(72)
+      Turtle.Move(65)
+      Turtle.Turn(72)
+      Turtle.Move(65)
+      Turtle.Turn(72)
+      Turtle.Move(65)
+      Turtle.Turn(72)
+      Turtle.Move(65)
+      Turtle.Hide()
+    Else 
+      Turtle.Speed = 9
+      Turtle.PenUp()
+      Turtle.Move(50)
+      Turtle.PenDown()
+      Turtle.Turn(90)
+      Turtle.Move(100)
+      Turtle.Turn(90)
+      Turtle.Move(100)
+      Turtle.Turn(90)
+      Turtle.Move(175)
+      Turtle.Turn(90)
+      Turtle.Move(100)
+      Turtle.Turn(90)
+      Turtle.Move(75)
+      Turtle.Hide()
+    EndIf
+  EndIf
+  
+'repeat until 0 is entered
+  
+TextWindow.WriteLine("There are three options that you may pick from: [3] with 100, [4] with 175x100, [5] with 65.")
+userNumber = TextWindow.Read()
+EndWhile
+  

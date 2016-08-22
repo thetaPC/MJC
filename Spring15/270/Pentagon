@@ -1,0 +1,21 @@
+'Maria Loza
+'Lab 2- Basic Shapes: Pentagon
+'February 1, 2015
+'Modified February 2, 2015
+'CSCI 270 - 4769
+
+Turtle.Speed = 9
+Turtle.PenUp()
+Turtle.Move(100)
+Turtle.PenDown()
+Turtle.Turn(126)
+Turtle.Move(65)
+Turtle.Turn(72)
+Turtle.Move(65)
+Turtle.Turn(72)
+Turtle.Move(65)
+Turtle.Turn(72)
+Turtle.Move(65)
+Turtle.Turn(72)
+Turtle.Move(65)
+Turtle.Hide()

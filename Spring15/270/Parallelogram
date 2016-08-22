@@ -1,0 +1,21 @@
+'Maria Loza
+'Lab 2- Basic Shapes: Parallelogram
+'February 1, 2015
+'Modified February 2, 2015
+'CSCI 270 - 4769
+
+Turtle.Speed = 9
+Turtle.PenUp()
+Turtle.Move(100)
+Turtle.PenDown()
+Turtle.Turn(90)
+Turtle.Move(100)
+Turtle.Turn(120)
+Turtle.Move(120)
+Turtle.Turn(60)
+Turtle.Move(200)
+Turtle.Turn(120)
+Turtle.Move(120)
+Turtle.Turn(60)
+Turtle.Move(100)
+Turtle.Hide()

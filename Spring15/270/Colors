@@ -1,0 +1,11 @@
+TextWindow.WriteLine("Pick a color: Red, Yellow, Green")
+userColor = TextWindow.Read()
+If Text.ConvertToLowerCase(userColor) = "red" Then
+  TextWindow.WriteLine("STOP")
+Else
+  If Text.ConvertToLowerCase(userColor) = "yellow" Then
+    TextWindow.WriteLine("Slow down!")
+  Else
+    TextWindow.WriteLine("Go!")
+  Endif
+EndIf

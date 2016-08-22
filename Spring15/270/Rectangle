@@ -1,0 +1,20 @@
+'Maria Loza
+'Rectangle
+'March 13, 2015
+'Personal
+
+Turtle.Speed = 9
+Turtle.PenUp()
+Turtle.Move(50)
+Turtle.PenDown()
+Turtle.Turn(90)
+Turtle.Move(100)
+Turtle.Turn(90)
+Turtle.Move(100)
+Turtle.Turn(90)
+Turtle.Move(175)
+Turtle.Turn(90)
+Turtle.Move(100)
+Turtle.Turn(90)
+Turtle.Move(75)
+Turtle.Hide()

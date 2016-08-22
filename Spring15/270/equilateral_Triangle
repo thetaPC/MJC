@@ -1,0 +1,16 @@
+'Maria Loza
+'Equilateral Triangle
+'March 13, 2015
+'Personal
+
+Turtle.Speed = 9
+Turtle.PenUp()
+Turtle.Move(100)
+Turtle.PenDown()
+Turtle.Turn(150)
+Turtle.Move(100)
+Turtle.Turn(120)
+Turtle.Move(100)
+Turtle.Turn(120)
+Turtle.Move(100)
+Turtle.Hide()
