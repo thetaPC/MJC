@@ -1,0 +1,16 @@
+#!/bin/bash
+#Lab 3
+#Maria Loza
+#for loops
+
+TD=$(date +%Y%m%d%H%M%S)
+FUN=$(fortune)
+
+LST=$(who | cut -f1 -d" " | sort | uniq)
+for i in $LST
+ do
+  echo $FUN | mail -s"Fortune of the Day" $i
+  echo "message sent to $i"
+ done
+
+echo $TD"|"$FUN >> logfile.txt

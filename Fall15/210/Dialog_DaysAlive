@@ -1,0 +1,47 @@
+#!/bin/bash
+# Lab 8 - Dialog
+# Maria Loza
+# Created: 4 November 2015
+# Modified: 5 November 2015
+# Due Date: 11 November 2015
+
+dialog --inputbox "Enter your name: " 8 40 2>name
+NAME=$(cat name)
+
+TODAY=$(dialog --stdout --calendar "Select today's date" 0 0 1 11 2015 | awk -F/ '{ print $2"/"$1"/"$3 }')
+
+BOD=$(dialog --stdout --calendar "Select your birthdate" 0 0 1 1 1970 | awk -F/ '{ print $2"/"$1"/"$3 }')
+
+         #dialog --msgbox "$NAME $BOD"  6 40
+
+
+CURRENT=$(date --date="$TODAY" +%s)
+#can also be typed as:
+BDAY=$(date -d$BOD +%s)
+
+secAlive=$((CURRENT - BDAY))
+dayAlive=$((secAlive / 86400))
+
+dialog --msgbox "Hello, $NAME, you have been alive for $dayAlive days." 6 40
+
+
+         # echo $secAlive
+         # echo $dayAlive
+         # echo $TODAY
+         # echo $NAME
+         # echo $BOD
+
+# ---------------------Lab 2: Days Alive code------------------------------
+#                         (for reference)
+# echo -n "Enter your name: "
+# read name1
+# echo -n "Enter your birthday (MM/DD/YYYY): "
+# read DOB
+
+# epch=$(date +%s)
+# bday=$(date --date="$DOB" +%s)
+# secAlv=$((epch - date))
+# dayAlv=$((secAlv/86400))
+#        #dayAlv2=$((dayAlv*-1))
+#
+# echo "Hello, $name1, you have been alive for $dayAlv days."

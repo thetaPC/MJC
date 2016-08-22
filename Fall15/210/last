@@ -1,0 +1,44 @@
+#!/bin/bash
+# Maria Loza
+# Lab 9 - last command to web
+# Created: 22 November 2015
+# Due Date: 25 November 2015
+
+{
+echo "$HDR"
+
+last | egrep -v '00:00|logged|wtmp|\+' | sed 's/[()]//g' > list
+# last | grep '\+' | egrep -v 'logged|wtmp' |  sed 's/[()]//g' > listedDays
+
+#cat list
+
+
+users=$(cat list | awk '{ print $1 }' | sort -u)
+#echo "$users"
+
+echo " "
+
+for user in $users
+do
+  times=$(cat list | grep "$user" | awk '{ print $NF }')
+  #echo "$times"
+  # daysTimes=$(cat listedDays | grep "$user" | awk '{ print $NF }')
+  for time in $times
+  do
+    hr=$(echo "$time" | awk -F: '{ print $1 }' | sed 's/^0//g')
+    min=$(echo "$time" | awk -F: '{ print $2 }'| sed 's/^0//g')
+    # day=$(echo "$daysTime" | awk -F+ '{ print $1 }')
+    # TOTALDYS=$(($TOTALDYS+$day))
+    TOTALMINS=$(($TOTALMINS+$min))
+    TOTALHRS=$(($TOTALHRS+$hr))
+  done
+  converting=$(($TOTALMINS/60))
+  # convertDays=$(($TOTALDYS*24))
+  TOTALHRS=$(($TOTALHRS+$converting))  
+  echo "$user has a total of $TOTALHRS hours of login time on this box."
+  echo " " 
+  TOTALHRS=0
+  TOTALMINS=0
+  TOTALDYS=0
+done
+echo "$FTR" ;} > ~/public_html/Lab_9.html

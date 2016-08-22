@@ -1,0 +1,20 @@
+#!/bin/bash
+# Lab 2 - Days Alive
+# Maria Loza
+
+echo -n "Enter your name: "
+read name1
+echo -n "Enter your birthday (MM/DD/YYYY): "
+read DOB
+
+epch=$(date +%s)
+bday=$(date --date="$DOB" +%s)
+secAlv=$((epch - date))
+dayAlv=$((secAlv/86400))
+       #dayAlv2=$((dayAlv*-1))
+
+echo "Hello, $name1, you have been alive for $dayAlv days."
+
+cool=$(fortune)
+echo "Enjoy your fortune at the moment!"
+echo $cool
