@@ -1,0 +1,56 @@
+'Chapter 3 Lesson C Exercise 4
+'Maria Loza
+'CSCI 221 Section 5294
+'Created: 4 October 2015
+
+Option Explicit On
+Option Infer Off
+Option Strict On
+
+Public Class frmMain
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
+
+        'variable declarations
+        Dim decLoan As Decimal
+        Dim decOil As Decimal
+        Dim decWash As Decimal
+        Dim decInsurance As Decimal
+        Dim decMaint As Decimal
+        Dim decGas As Decimal
+        Dim decMonthly As Decimal
+        Static decYearly As Decimal = 0D
+
+        'converting data types
+        Decimal.TryParse(txtLoan.Text, decLoan)
+        Decimal.TryParse(txtOil.Text, decOil)
+        Decimal.TryParse(txtWash.Text, decWash)
+        Decimal.TryParse(txtInsurance.Text, decInsurance)
+        Decimal.TryParse(txtMaint.Text, decMaint)
+        Decimal.TryParse(txtGas.Text, decGas)
+
+        'calculating monthly
+        decMonthly = (decLoan + decOil + decWash + decInsurance + decMaint + decGas)
+        lblMonthly.Text = decMonthly.ToString("C2")
+
+        'calculating yearly
+        decYearly = decYearly + decMonthly
+        lblYearly.Text = decYearly.ToString("C2")
+
+    End Sub
+
+    'text changes
+    Private Sub ClearTexts(sender As Object, e As EventArgs) _
+        Handles txtLoan.TextChanged, txtOil.TextChanged, txtWash.TextChanged, txtInsurance.TextChanged, _
+        txtMaint.TextChanged, txtGas.TextChanged
+
+        lblMonthly.Text = String.Empty
+        lblYearly.Text = String.Empty
+
+    End Sub
+
+End Class
