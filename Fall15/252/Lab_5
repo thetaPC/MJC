@@ -1,0 +1,110 @@
+
+<!--
+
+Maria Loza
+
+CSCI 252 Section 5296
+
+Professor Phillips
+
+Created: 23 September 2015
+
+Modified: 25 September 2015
+    	  29 September 2015
+    	  
+-->
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+<title>Morse Code</title>
+<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+<style>
+	p2 {
+		font-family: 'Indie Flower', serif;	
+		font-size: 48px;
+	}
+</style>
+
+
+</head>
+
+<!--
+<input type="button" id="calculate" value="Convert" onClick="converting()"/>
+Enter!!: <input type="text" id="letter" onchange="converting()"/>
+-->
+
+<body>
+
+<h1>
+Text to Morse Code Convertor!
+</h1>
+
+<p1>
+Enter!!: <input type="text" id="letter" />
+<input type="button" id="calculate" value="Convert" onClick="converting()"/>
+</p1> 
+
+<br>
+
+<b><p2 id="result" style="font-size: 90px"></p2></b>
+
+<script>
+
+function converting() {
+
+	var lett = document.getElementById("letter").value.toUpperCase();
+	
+	var morse = { 
+		A: ".-  ", 
+		B: "-...  ", 
+		C: "-.-.  ",
+		D: "-..  ",
+		E: ".  ",
+		F: "..-.  ",
+		G: "--.  ",
+		H: "....  ",
+		I: "..  ",
+		J: ".---  ",
+		K: "-.-  ",
+		L: ".-..  ",
+		M: "--  ",
+		N: "-.  ",
+		O: "---  ",
+		P: ".--.  ",
+		Q: "--.-  ",
+		R: ".-.  ",
+		S: "...  ",
+		T: "-  ",
+		U: "..-  ",
+		V: "...-  ",
+		W: ".--  ",
+		X: "-..-  ",
+		Y: "-.--  ",
+		Z: "--..  "
+	};
+
+	var final = "";
+	for (var i = 0; i < lett.length; i += 1) {
+    		var m = lett.charAt(i);
+    		final += morse[m] || "<br>";
+	}	
+
+	document.getElementById("result").innerHTML = final;
+
+}
+
+</script>
+
+
+</body>
+
+</html>

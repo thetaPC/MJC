@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>A single die roll</title>
+   <!-- <p style="font-size:800%"</p> -->
+  </head>
+  <body>
+  Beware!!!!
+	<p>It can go on forever!!!!!</p>
+    
+	<script>
+				//var animation;
+
+				//function countdown() {
+					//animation = setInterval(rolling, 1000);
+			
+				//}
+
+		var animation = setInterval(function countdown(){ rolling() }, 2000);
+	
+			
+
+		function rolling() {
+			var roll = (1 + Math.floor(6 * Math.random()));
+			if (roll == 1) {
+			var die = '&#x2680;';
+			} else if (roll == 2) {
+			var die = '&#x2681;';
+			} else if (roll == 3) {
+			var die = '&#x2682;';
+			} else if (roll == 4) {
+			var die = '&#x2683;';
+			} else if (roll == 5) {
+			var die = '&#x2684;';
+			} else if (roll == 6) {
+			var die = '&#x2680;';
+			}
+
+		document.write(die.fontsize(500));
+				//var bigDie = die.fontsize(800);
+				//document.write(bigDie)	
+
+			
+		}
+
+				//function stop() {
+					//var timeRun = 0;
+					//var timeRun +=1;
+					//if (timeRun === 3) {
+						//clearInterval(animation);
+					//}
+				//}
+				//function stop() {
+					//clearInterval(animation);
+				//}
+
+				//countdown();
+				//rolling();
+				//setTimeout(stop(), 3000);
+				//stop();
+	</script>
+
+    
+ 
+  </body>
+</html>
+
+<!--
+var mathDice = document.write(1 + Math.floor(6 * Math.random()));
+	
+	document.getElementById("dice").HTML = "&#x268" + mathDice + ";";
+
+document.getElementById("die").innerHTML = document.write("&#x268;" + (1+Math.floor(6*Math.random()));
+
+
+<script>
+	function dice() {
+		
+		document.getElementById("die").innerHTML = document.write("&#x268;" + (1+Math.floor(6*Math.random()));
+	}
+    </script>
+
+   <input type="button" id="roll" value="Roll the dice!" onClick="dice()" />
+   <p id="dice"></p>
+
+
+    <script>
+	document.getElementById("roll").onclick = function () {
+		
+		document.getElementById("die").innerHTML = ((1+Math.floor(6*Math.random()));
+	}
+    </script>
+
+   <input type="button" id="roll" value="Roll the dice!" />
+   
+   <p id="die"></p>
+
+
+switch (roll) {
+			case 1: document.write(&#x2680;); break;
+			case 2: document.write(&#x2681;); break;
+			case 3: document.write(&#x2682;); break;
+			case 4: document.write(&#x2683;); break;	
+			case 5: document.write(&#x2684;); break;
+			case 6: document.write(&#x2685;); break;	
+		}
+-->

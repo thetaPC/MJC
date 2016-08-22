@@ -1,0 +1,46 @@
+
+<!--
+Maria Loza
+CSCI 252 Section 5296
+Professor Phillips
+4 September 2015
+Modified: 5 September 2015
+Last Modified: 17 September 2015
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First Webpage</title>
+<style>
+
+body {
+     background-color: #99CCFF;
+}
+
+h1 {
+   color: #9900CC;
+   text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Adventurous Sushi!</h1>
+
+<center><img src="yummy_sushi.jpg" alt="Sushi Boats" style="width:880px;height:540px;" align="middle"></center>
+
+<br>
+<center><p>Love sushi? Stop by Kobe Sushi Buffet to have a unique experience.</p></center>
+
+<p style="text-align:right">Photo Source: Maria Loza</p>
+
+<center><iframe src="http://d3shooter.herokuapp.com/" width="1400" height="900" style="border:none"></iframe></center>
+
+</body>
+</html>

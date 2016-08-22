@@ -1,0 +1,44 @@
+
+<!--
+Maria Loza
+CSCI 252 Section 5296
+Professor Phillips
+Lab: pg. 51 #21
+6 September 2015
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>The sum of two numbers.</title>
+<script>
+	function addNumbers()
+	{
+		var val1 = document.getElementById("num1").value;
+		var val2 = document.getElementById("num2").value;
+		var sum = parseInt(val1) + parseInt(val2);
+		document.getElementById("result").innerHTML = sum; 
+	}
+</script>
+</head>
+
+<body>
+<h1>2 Numbers!</h1>
+ 
+<p>
+Enter the first number:
+<input type="text" id="num1" />
+<br>
+<br>
+Enter the second number:
+<input type="text" id="num2" />
+<br>
+<input type="button" id="total" value="Total Sum" onClick="addNumbers()" />
+</p>
+
+<p id="result"></p>
+
+
+
+</body>
+</html>
