@@ -1,0 +1,71 @@
+'Maria Loza
+'F/C Degree Converter
+'17 August 2015
+'Modified 18 August 2015
+'Modified 20 August 2015
+
+Module Module1
+
+    Sub Main()
+        Dim strAns As String
+        Console.WriteLine("Enter the degree you wish to convert from: [F]ahrenheit or [C]elsius")
+        Dim strDeg As String = Console.ReadLine()
+        'Dim strDeg As String
+        Do
+            'Dim strAns As String
+            If strDeg.ToUpper = "F" Then
+                Console.Write("Enter the Fahrenheit temperature to be converted to Celsius: ")
+                Dim intF As Integer = Console.ReadLine()
+                Dim intSum1 As Integer = ((intF - 32) * (5 / 9))
+                Console.WriteLine(intSum1)
+                Console.WriteLine("Do you want to switch back to the original degree? [Y]es/[N]o")
+                strAns = Console.ReadLine()
+                'Do Until strAns.ToUpper = ""
+                If strAns.ToUpper = "Y" Then
+                    Dim intFahOr As Integer = (intSum1 * (9 / 5) + 32)
+                    Console.WriteLine(intFahOr)
+                    Console.WriteLine("Enter the degree you wish to convert from: [F]ahrenheit or [C]elsius")
+                    strDeg = Console.ReadLine()
+                Else
+                    If strAns.ToUpper = "N" Then
+                        'Continue Do
+                        Console.WriteLine("Enter the degree you wish to convert from: [F]ahrenheit or [C]elsius")
+                        strDeg = Console.ReadLine()
+                        'Exit Do
+                    End If
+                    'Loop
+                End If
+            Else
+                If strDeg.ToUpper = "C" Then
+                    Console.Write("Enter the Celsius temperature to be converted to Fahrenheit: ")
+                    Dim intC As Integer = Console.ReadLine()
+                    Dim intSum2 As Integer = intC * (9 / 5) + 32
+                    Console.WriteLine(intSum2)
+                    Console.WriteLine("Do you want to switch back to the original degre? [Y]es/[N]o")
+                    strAns = Console.ReadLine()
+                    If strAns.ToUpper = "Y" Then
+                        Dim intCelOr As Integer = (intSum2 - 32) * (5 / 9)
+                        Console.WriteLine(intCelOr)
+                        Console.WriteLine("Enter the degree you wish to convert from: [F]ahrenheit or [C]elsius")
+                        strDeg = Console.ReadLine()
+                    Else
+                        If strAns.ToUpper = "N" Then
+                            Console.WriteLine("Enter the degree you wish to convert from: [F]ahrenheit or [C]elsius")
+                            strDeg = Console.ReadLine()
+                        End If
+                    End If
+                End If
+                'Console.WriteLine("Do you want to switch back to the original degree? [Y]es/[N]o")
+                'Dim strAns As String = Console.ReadLine()
+                'If strAns.ToUpper = "Y" Then
+                'Dim intFahOr As Integer = intSum1 * (9 / 5) + 32
+                'End If
+                'Loop Until strAns = "N"
+            End If
+            'Loop Until strAns.ToUpper <> "Y" Or strAns.ToUpper <> "N" Or strDeg.ToUpper <> "F" Or strDeg.ToUpper <> "C"
+            'Loop Until strAns.ToUpper <> "Y" Or "N"
+        Loop Until strAns.ToUpper = ""
+        Console.WriteLine("End of the program. Thank you!")
+    End Sub
+
+End Module
