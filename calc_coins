@@ -1,0 +1,25 @@
+#!/bin/bash
+#Lab 4 - Coins
+#Maria Loza
+
+#user input
+echo -n "Enter your name: "
+read NAME
+echo -n "Enter the number of quarters: "
+read QUART
+echo -n "Enter the number of dimes: "
+read DIMES
+echo -n "Enter the number of nickels: "
+read NICK
+echo -n "Enter the number of pennies: "
+read PENN
+
+#calculations
+TOTAL=$(echo "(($QUART*0.25)+($DIMES*0.10)+($NICK*0.05)+($PENN*0.01))" | bc)
+DT=$(date +%Y%m%d%H%M%S)
+
+#output
+echo "Hello, $NAME, you have $TOTAL in change."
+
+#log file
+echo $DT"|"$NAME"|"$TOTAL >> logFile.txt
