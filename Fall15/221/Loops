@@ -1,0 +1,45 @@
+'Chapter 6 Lesson A Exercise 1
+'Maria Loza
+'CSCI 221 Section 5294
+'Created: 2 November 2015
+
+Option Strict On
+Option Explicit On
+Option Infer Off
+
+
+Public Class frmMain
+
+
+    Private Sub btnWhile_Click(sender As Object, e As EventArgs) Handles btnWhile.Click
+
+        'variable declarations
+        Dim intTotal As Integer
+
+        'stating intTotal
+        Integer.TryParse(txtInput.Text, intTotal)
+
+        'loops the statement
+        Do While intTotal > 0
+            intTotal = intTotal - 2
+            lblOutput.Text = intTotal.ToString
+        Loop
+
+    End Sub
+
+    Private Sub btnUntil_Click(sender As Object, e As EventArgs) Handles btnUntil.Click
+
+        'variable declarations
+        Dim intTotal As Integer
+
+        'stating intTotal
+        Integer.TryParse(txtInput.Text, intTotal)
+
+        'loops the statement
+        Do Until intTotal < 0
+            intTotal = intTotal - 2
+            lblOutput.Text = intTotal.ToString
+        Loop
+
+    End Sub
+End Class

@@ -1,0 +1,28 @@
+'Chapter 8 Lesson A Exercise 2
+'Maria Loza
+'CSCI 221 Section 5294
+'Created: 13 November 2015
+'Due Date: 19 November 2015
+
+Option Strict On
+Option Explicit On
+Option Infer Off
+
+Public Class frmMain
+
+    Private strWord As String = "In"
+    'the word In would be displayed upon load the program
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        lblIndiana.Text = strWord
+
+    End Sub
+
+    Private Sub btnInsert_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
+
+        'Dim strNewInd As String
+        strWord = strWord.Insert(2, "diana")
+        lblIndiana.Text = strWord
+
+    End Sub
+End Class

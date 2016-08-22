@@ -1,0 +1,30 @@
+'Chapter 4 Lesson A #9
+'Maria Loza
+'CSCI 221 Section 5294
+'Created: 12 October 2015
+
+Option Explicit On
+Option Strict On
+Option Infer Off
+
+Public Class Form1
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'variable declarations
+        Dim dblSales As Double
+        Dim strCommType As String
+        Dim dblComm As Double
+
+        'converting
+        Double.TryParse(txtSales.Text, dblSales)
+
+        'calculate
+        If strCommType = "Y" OrElse "y" Then
+            dblComm = dblSales * 0.025
+        Else
+            dblComm = dblSales * 0.02
+        End If
+        lblComm = dblComm.ToString("N2")
+    End Sub
+End Class

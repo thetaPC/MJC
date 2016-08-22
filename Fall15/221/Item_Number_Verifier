@@ -1,0 +1,35 @@
+' Name:         Item Number Project
+' Purpose:      Verifies an item number's format
+' Programmer:   Maria Loza on 13 November 2015
+' Class:        CSCI 221 Section 5294
+' Due Date:     19 November 2015
+
+Option Explicit On
+Option Strict On
+Option Infer Off
+
+Public Class frmMain
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub txtItemNum_Enter(sender As Object, e As EventArgs) Handles txtItemNum.Enter
+        txtItemNum.SelectAll()
+    End Sub
+
+    Private Sub txtItemNum_TextChanged(sender As Object, e As EventArgs) Handles txtItemNum.TextChanged
+        lblVerification.Text = String.Empty
+    End Sub
+
+    'checks the format of the item number, display a prompt if the format is correct or not.
+    Private Sub btnVerify_Click(sender As Object, e As EventArgs) Handles btnVerify.Click
+
+        If txtItemNum.Text Like "###-[a-zA-Z]-##" Then
+            MessageBox.Show("The format is correct.", "Format", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            MessageBox.Show("The format is incorrect.", "Format", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
+
+    End Sub
+End Class

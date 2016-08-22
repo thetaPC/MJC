@@ -1,0 +1,77 @@
+'Chapter 5 Lesson C #4
+'Maria Loza
+'CSCI 221 Section 5294
+'Created: 22 October 2015
+'Due Date: 22 October 2015
+
+Option Strict On
+Option Explicit On
+Option Infer Off
+
+Public Class frmMain
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
+
+        'variable declarations
+        Dim intBox As Integer
+        Dim intPav As Integer
+        Dim intLawn As Integer
+        Dim intTix As Integer
+        Dim intDue As Integer
+        Dim dblDue As Double
+
+        'variable conversions
+        Integer.TryParse(txtBox.Text, intBox)
+        Integer.TryParse(txtPav.Text, intPav)
+        Integer.TryParse(txtLawn.Text, intLawn)
+
+        'calculating due total
+        intDue = ((intBox * 75) + (intPav * 30) + (intLawn * 21))
+        dblDue = Convert.ToDouble(intDue)
+
+        'calculating ticket total
+        intTix = intBox + intPav + intLawn
+
+        'displaying
+        lblTix.Text = intTix.ToString()
+        lblDue.Text = dblDue.ToString("C2")
+
+
+        
+
+    End Sub
+
+
+    Private Sub chkBox_Click(sender As Object, e As EventArgs) Handles chkBox.Click
+
+        If chkBox.Checked Then
+            txtBox.Visible = True
+        End If
+
+    End Sub
+
+    Private Sub chkPav_Click(sender As Object, e As EventArgs) Handles chkPav.Click
+
+        If chkPav.Checked Then
+            txtPav.Visible = True
+        End If
+
+    End Sub
+
+    Private Sub chkLawn_Click(sender As Object, e As EventArgs) Handles chkLawn.Click
+
+        If chkLawn.Checked Then
+            txtLawn.Visible = True
+        End If
+
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+End Class

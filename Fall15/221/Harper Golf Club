@@ -1,0 +1,31 @@
+Public Class frmMain
+
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
+
+        'variable declarations
+        Const intFee As Integer = 25
+        Dim strStatus As String = txtMem.Text.ToUpper
+        Dim strDay As String = txtDay.Text.ToUpper
+
+        If strStatus = "N" Then
+            If strDay = "D" Then
+                lblFee.Text = intFee + 15
+            Else
+                lblFee.Text = intFee + 20
+            End If
+        Else
+            lblFee.Text = intFee
+        End If
+
+
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+End Class

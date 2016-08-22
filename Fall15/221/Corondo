@@ -1,0 +1,59 @@
+'Corondo Industries: Ch4 Lesson B #5
+'Maria Loza
+'CSCI 221 Section 5294
+'Created: 12 October 2015
+
+Option Explicit On
+Option Strict On
+Option Infer Off
+
+Public Class frmMain
+
+    'constant delcarations
+    Const disc As Double = 0.1
+
+    Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
+
+        'variable declarations
+        Dim intQuant As Integer
+        Dim dblPrice As Double
+        Dim dblTotal As Double
+        Dim dblDisc As Double
+        Dim dlgButton As DialogResult = MessageBox.Show("Are you a wholsaler?", "Wholesale", MessageBoxButtons.YesNo, _
+                                                        MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+
+        'convert declarations
+        Integer.TryParse(txtQuant.Text, intQuant)
+        Double.TryParse(txtPrice.Text, dblPrice)
+
+
+
+        'calculations
+        MessageBox.Show("Are you a wholsaler?", "Wholesale", MessageBoxButtons.YesNo, MessageBoxIcon.Information, _
+                        MessageBoxDefaultButton.Button1)
+        If dlgButton = Windows.Forms.DialogResult.Yes Then
+            dblTotal = (intQuant * dblPrice)
+            dblDisc = (dblTotal * disc)
+            dblTotal = (dblTotal - dblDisc)
+            lblTotal2.Text = dblTotal.ToString("C2")
+            lblDisc2.Text = disc.ToString("P2")
+        Else
+            dblTotal = (intQuant * dblPrice)
+            lblTotal2.Text = dblTotal.ToString("C2")
+        End If
+
+    End Sub
+
+    'closing button
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    'clear the form
+    Private Sub ClearLabels(sender As Object, e As EventArgs) Handles txtQuant.TextChanged, txtPrice.TextChanged
+
+        lblDisc2.Text = String.Empty
+        lblTotal2.Text = String.Empty
+
+    End Sub
+End Class

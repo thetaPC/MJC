@@ -1,0 +1,33 @@
+'Chapter 7 Lesson A Exercise 1
+'Maria Loza
+'CSCI 221 Section 5294
+'Created: 9 November 2015
+'Due Date: 12 November 2015
+
+Option Strict On
+Option Explicit On
+Option Infer Off
+
+
+Public Class frmMain
+
+    'dividing numbers by 2
+    Private Sub DivideByTwo(ByRef dividend As Double)
+        lblNum.Text = (dividend / 2).ToString
+    End Sub
+
+    Private Sub btnDiv_Click(sender As Object, e As EventArgs) Handles btnDiv.Click
+
+        'variable declarations
+        Dim number As Double
+
+        'assigning variables
+        number = 87.8
+
+        'sending numbers to be divided
+        Call DivideByTwo(number)
+
+    End Sub
+
+End Class
+

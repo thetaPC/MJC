@@ -1,0 +1,49 @@
+'Table: Chapter 6 Lesson B Exercise 6
+'Maria Loza
+'CSCI 221 Section 5294
+'Created: 2 November 2015
+'Modified: 3 November 2015
+
+Option Strict On
+Option Explicit On
+Option Infer Off
+
+Public Class frmMain
+
+    Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
+
+        'Dim txtTitle As String
+        'Dim counter As Integer = 0
+        'lblList.Text = "Column   " & ControlChars.NewLine
+
+
+        'intRow and intColumn will be multiplied to each other in order
+        'to create the table.
+        For intRow As Integer = 1 To 4
+
+            'lblList.Text = lblList.Text & intNumber.ToString & "   "
+            '& (intNumber + counter).ToString
+            'counter = counter + 1
+            For intColumn As Integer = 1 To 5
+                'lblList.Text = lblList.Text
+                lblList.Text = lblList.Text & (intRow * intColumn).ToString & "   "
+            Next intColumn
+
+            lblList.Text = lblList.Text & ControlChars.NewLine
+            Me.Refresh()
+            System.Threading.Thread.Sleep(500)
+
+        Next intRow
+
+    End Sub
+End Class
+
+'For intRow As Integer = 1 To 4
+
+'Dim counter As Integer = 1
+' lblList.Text = lblList.Text & ControlChars.NewLine
+'& "   " & (intRow * intNumber)
+'counter = counter + 1
+
+
+'Next intRow

@@ -1,0 +1,57 @@
+'Zip Project: Chapter 6 Lesson C Exercise 2
+'Maria Loza
+'CSCI 221 Section 5294
+'Created: 3 November 2015
+
+Option Strict On
+Option Explicit On
+Option Infer Off
+
+Public Class frmMain
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        'adding City list upon starting/loading the program
+        lstCity.Items.Add("Park Ridge")
+        lstCity.Items.Add("Barrington")
+        lstCity.Items.Add("Glen Ellyn")
+        lstCity.Items.Add("Algonquin")
+        lstCity.Items.Add("Crystal Lake")
+
+    End Sub
+
+    'everytime that a city is selected, the city's zip will show. upon selecting a new
+    'city, the zip code box clears to reveal the new zip.
+    Private Sub lstCity_SelectedValueChanged(sender As Object, e As EventArgs) Handles lstCity.SelectedValueChanged
+
+        'variable declarations
+        Dim intCity As Integer
+
+        'storing info to variables
+        intCity = lstCity.SelectedIndex
+
+        Select Case intCity
+            Case 0
+                lblZip.Text = (60102).ToString
+            Case 1
+                lblZip.Text = (60010).ToString & ", " & (60011).ToString
+            Case 2
+                lblZip.Text = (60012).ToString
+            Case 3
+                lblZip.Text = (60137).ToString & ", " & (60138).ToString
+            Case 4
+                lblZip.Text = (60068).ToString
+
+        End Select
+
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+
+        'closing the program with button
+        Me.Close()
+
+    End Sub
+
+
+End Class

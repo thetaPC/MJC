@@ -1,0 +1,26 @@
+'Chapter 3 Lesson B Exercise 5
+'Maria Loza
+'CSCI 221 Section 5294
+'Created: 4 October 2015
+
+Option Explicit On
+Option Infer Off
+Option Strict On
+
+Public Class frmMain
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Dim strFirst As String = "Karl"
+        Dim strMiddle As String = "G."
+        Dim strLast As String = "Perillo"
+        Dim strNickname As String = "KG"
+
+        lblMsg.Text = "My name is " & strFirst & " " & strMiddle & " " & strLast & ", but you can call me " & strNickname & "."
+
+    End Sub
+
+    Private Sub lblMsg_Click(sender As Object, e As EventArgs) Handles lblMsg.Click
+
+    End Sub
+End Class
