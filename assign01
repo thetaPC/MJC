@@ -1,0 +1,47 @@
+/*
+Maria Loza
+CSCI 271 Section 5865
+Ch. 3 - Problem 8, page 86
+Due Date: 9/24/15
+*/
+
+/*
+Problem (my understanding):
+The question wants the programmer to create a simple program that allows users to 
+insert a number. The code must then be able to determine if it is an even or odd.
+Then the answer should be produced as such: The number (x) is an even/odd.
+
+Solution:
+I must use cout to inform the user to insert a number. I'll clarify by saying only 
+a whole number must be inserted. The book suggests using a modulus operator (%) w/ 2. 
+I finally looked up further information about this operator and it finally makes sense.
+Therefore, I will have an If-Then statement using %2. The cout will give the 
+user the information if their number is odd or even.
+
+*/
+
+#include "..\..\std_lib_facilities.h"
+
+int main()
+{
+	//variables
+	int num1;
+
+	//user input
+	cout << "Enter a whole number: ";
+	cin >> num1;
+
+	//computation
+	if (num1 % 2 == 0)
+		cout << "The number " << num1 << " is even. \n";
+	else
+		cout << "The number " << num1 << " is odd. \n";
+
+	return 0;
+
+} //end main. I have successfully set up my project without needing to look up what I must insert first. :)
+
+/*
+It seems that my project worked the first time. I will have to further look for possible bugs before
+I must turn it in. 
+*/
