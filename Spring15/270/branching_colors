@@ -1,0 +1,61 @@
+'Maria Loza
+'Lab 3- Branching: Shapes
+'February 20, 2015
+'CSCI 270 - 4769
+
+TextWindow.WriteLine("Select a shape: [R]ectangle, [P]arallelogram, P[e]ntagon")
+userShape = TextWindow.Read()
+If Text.ConvertToUpperCase(userShape) = "R" Then
+  Turtle.Speed = 9
+  Turtle.PenUp()
+  Turtle.TurnLeft()
+  Turtle.Move(50)
+  Turtle.TurnLeft()
+  Turtle.Move(50)
+  Turtle.Turn(180)
+  'Turtle.Move(50)
+  Turtle.PenDown()
+  Turtle.Turn(45)
+  Turtle.Move(320)
+  Turtle.Turn(135)
+  Turtle.Move(320)
+  Turtle.Turn(90)
+  Turtle.Move(320)
+  Turtle.Turn(135)
+  Turtle.Move(133)
+  Turtle.Hide()
+Else
+  If Text.ConvertToUpperCase(userShape) = "P" Then
+  Turtle.Speed = 9
+  Turtle.PenUp()
+  Turtle.Move(100)
+  Turtle.PenDown()
+  Turtle.Turn(90)
+  Turtle.Move(100)
+  Turtle.Turn(120)
+  Turtle.Move(120)
+  Turtle.Turn(60)
+  Turtle.Move(200)
+  Turtle.Turn(120)
+  Turtle.Move(120)
+  Turtle.Turn(60)
+  Turtle.Move(100)
+  Turtle.Hide()
+  Else
+    Turtle.Speed = 9
+    Turtle.PenUp()
+    Turtle.Move(100)
+    Turtle.PenDown()
+    Turtle.Turn(126)
+    Turtle.Move(65)
+    Turtle.Turn(72)
+    Turtle.Move(65)
+    Turtle.Turn(72)
+    Turtle.Move(65)
+    Turtle.Turn(72)
+    Turtle.Move(65)
+    Turtle.Turn(72)
+    Turtle.Move(65)
+    Turtle.Hide()
+  EndIf
+EndIf
